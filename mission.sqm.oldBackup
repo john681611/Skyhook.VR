@@ -1,0 +1,346 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"A3_Characters_F_Gamma",
+		"a3_characters_f",
+		"A3_Air_F_EPC_Plane_CAS_01",
+		"A3_Air_F_Heli_Heli_Transport_04",
+		"map_vr",
+		"A3_Soft_F_Car",
+		"A3_Structures_F_EPC_Items_Electronics",
+		"A3_Air_F_Beta_Heli_Transport_01",
+		"A3_Soft_F_Gamma_HEMTT",
+		"A3_Structures_F_Training"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Air_F_Beta_Heli_Transport_01",
+		"A3_Characters_F_Gamma",
+		"a3_characters_f",
+		"A3_Air_F_EPC_Plane_CAS_01",
+		"A3_Air_F_Heli_Heli_Transport_04",
+		"A3_Soft_F_Gamma_HEMTT",
+		"A3_Soft_F_Car",
+		"A3_Structures_F_EPC_Items_Electronics",
+		"A3_Structures_F_Training",
+		"map_vr"
+	};
+	randomSeed=3241224;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+	class Groups
+	{
+		items=5;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4674.6821,5,3454.7783};
+					azimut=-51.096298;
+					offsetY=30;
+					special="FLY";
+					id=0;
+					side="WEST";
+					vehicle="B_Heli_Transport_01_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="catcher";
+					init=" this setVariable [""SKM_Catcher"",1,true]; ";
+				};
+			};
+			class Waypoints
+			{
+				items=3;
+				class Item0
+				{
+					position[]={4644.5742,2.9701064,3489.1577};
+					speed="LIMITED";
+					combat="SAFE";
+					expActiv="catcher flyInHeight 30;";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={3948.2485,0.075273037,4145.0259};
+					expActiv="catcher flyInHeight 30;";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item2
+				{
+					position[]={4055.7649,5,4212.6611};
+					type="TR UNLOAD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item1
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4103.5454,5,3663.3315};
+					azimut=-63.918598;
+					id=1;
+					side="WEST";
+					vehicle="B_soldier_PG_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="C";
+					init="ls = this addAction [""Launch Skyhook"", {[[C,catcher,30,50,true,2],""SKM""] call BIS_fnc_MP;}];";
+				};
+			};
+		};
+		class Item2
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6709.6201,5,1184.1982};
+					azimut=-38.022999;
+					special="FLY";
+					id=2;
+					side="WEST";
+					vehicle="B_Plane_CAS_01_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					ammo=0;
+					text="b";
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3731.0872,50.056362,3987.2832};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item3
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4369.209,5,3753.5742};
+					azimut=-312.90302;
+					id=3;
+					side="WEST";
+					vehicle="B_soldier_PG_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+					init="this setVariable [""SKM"",[""P"",30,50,true,2,""""],true];";
+				};
+			};
+		};
+		class Item4
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4353.4102,5,3763.1704};
+					azimut=-415.022;
+					id=4;
+					side="WEST";
+					vehicle="B_soldier_PG_F";
+					leader=1;
+					skill=0.60000002;
+					init="this setVariable [""SKM"",[""P"",30,50,true,2,""""],true];";
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=5;
+		class Item0
+		{
+			position[]={4411.5874,5,3772.7427};
+			azimut=-63.918598;
+			id=5;
+			side="EMPTY";
+			vehicle="Land_Pod_Heli_Transport_04_covered_F";
+			leader=1;
+			skill=0.60000002;
+			text="Air";
+			init="this attachto [b,[0,-1,-1]];";
+		};
+		class Item1
+		{
+			position[]={4325.6738,5,3790.5684};
+			id=6;
+			side="EMPTY";
+			vehicle="B_Truck_01_mover_F";
+			skill=0.60000002;
+			text="car";
+			init="this setVariable [""SKM"",[""P"",30,50,true,0,""""],true];";
+		};
+		class Item2
+		{
+			position[]={4344.543,5,3772.9365};
+			id=7;
+			side="EMPTY";
+			vehicle="C_Hatchback_01_F";
+			skill=0.60000002;
+			init="this setVariable [""SKM"",[""P"",30,50,true,1,""""],true];";
+		};
+		class Item3
+		{
+			position[]={4335.1787,5,3781.4595};
+			azimut=-415.022;
+			id=8;
+			side="EMPTY";
+			vehicle="Land_Device_assembled_F";
+			leader=1;
+			skill=0.60000002;
+			init="this setVariable [""SKM"",[""P"",30,50,true,1,""""],true];";
+		};
+		class Item4
+		{
+			position[]={4367.6377,5,3750.0737};
+			azimut=-312.90302;
+			id=9;
+			side="EMPTY";
+			vehicle="Skeet_Clay_F";
+			leader=1;
+			skill=0.60000002;
+			init="larry = ""Goat_random_F"" createVehicle position this; this setVariable [""SKM"",[""P"",30,50,true,2,""""],true]; larry attachTo [this,[0,0,0.5]];";
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"map_vr"
+	};
+	addOnsAuto[]=
+	{
+		"map_vr"
+	};
+	randomSeed=2744099;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"map_vr"
+	};
+	addOnsAuto[]=
+	{
+		"map_vr"
+	};
+	randomSeed=14785804;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"map_vr"
+	};
+	addOnsAuto[]=
+	{
+		"map_vr"
+	};
+	randomSeed=8976545;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};

@@ -1,0 +1,608 @@
+version=52;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=24;
+	};
+	class Camera
+	{
+		pos[]={4369.209,30,3728.6243};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Air_F_Heli_Heli_Transport_04",
+	"cba_xeh",
+	"A3_Soft_F_Gamma_Truck_01",
+	"ace_realisticnames",
+	"ace_cargo",
+	"A3_Soft_F_Gamma_Hatchback_01",
+	"A3_Structures_F_EPC_Items_Electronics",
+	"A3_Structures_F_Training",
+	"A3_Characters_F",
+	"A3_Air_F_Beta_Heli_Transport_01",
+	"ace_gforces",
+	"ace_parachute",
+	"A3_Air_F_EPC_Plane_CAS_01"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=9;
+		class Item0
+		{
+			className="A3_Air_F_Heli";
+			name="Arma 3 Helicopters - Aircrafts";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Soft_F_Gamma";
+			name="Arma 3 - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item3
+		{
+			className="ace_cargo";
+			name="ACE3 - Cargo";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item4
+		{
+			className="A3_Structures_F_EPC";
+			name="Arma 3 Win Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item5
+		{
+			className="A3_Structures_F";
+			name="Arma 3 - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item6
+		{
+			className="A3_Air_F_Beta";
+			name="Arma 3 Beta - Aircrafts";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item7
+		{
+			className="ace_parachute";
+			name="ACE3 - Parachute";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item8
+		{
+			className="A3_Air_F_EPC";
+			name="Arma 3 Win Episode - Aircrafts";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+	};
+};
+randomSeed=299032;
+class ScenarioData
+{
+	author="INF_Mike64";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+	class Entities
+	{
+		items=12;
+		class Item0
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4411.5874,6.4767475,3772.7427};
+				angles[]={0,5.1675954,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this attachto [b,[0,-1,-1]];";
+				name="Air";
+			};
+			id=0;
+			type="Land_Pod_Heli_Transport_04_covered_F";
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4325.6738,6.9147005,3790.5684};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this setVariable [""SKM"",[""P"",30,50,true,0,""""],true];";
+				name="car";
+			};
+			id=1;
+			type="B_Truck_01_mover_F";
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4344.543,6.4501238,3772.9387};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this setVariable [""SKM"",[""P"",30,50,true,1,""""],true];";
+			};
+			id=2;
+			type="C_Hatchback_01_F";
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4335.1353,5.7216406,3781.4993};
+				angles[]={0,5.3228707,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this setVariable [""SKM"",[""P"",30,50,true,1,""""],true];";
+			};
+			id=3;
+			type="Land_Device_assembled_F";
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4367.6377,5.0179601,3750.0737};
+				angles[]={0,0.82199764,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="larry = ""Goat_random_F"" createVehicle position this; this setVariable [""SKM"",[""P"",30,50,true,2,""""],true]; larry attachTo [this,[0,0,0.5]];";
+			};
+			id=4;
+			type="Skeet_Clay_F";
+		};
+		class Item5
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=7;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4674.6821,55.001438,3454.8284};
+						angles[]={0,5.4523711,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						name="catcherD";
+						isPlayable=1;
+					};
+					id=7;
+					type="B_Helipilot_F";
+					atlOffset=50;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4674.6821,55.001438,3454.8284};
+						angles[]={0,5.4523711,0};
+					};
+					side="West";
+					class Attributes
+					{
+						name="catcherG";
+						isPlayable=1;
+					};
+					id=8;
+					type="B_Helipilot_F";
+					atlOffset=50;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4674.6821,55.001438,3454.8284};
+						angles[]={0,5.4523711,0};
+					};
+					side="West";
+					class Attributes
+					{
+					};
+					id=9;
+					type="B_Helicrew_F";
+					atlOffset=50;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4674.6821,55.001438,3454.8284};
+						angles[]={0,5.4523711,0};
+					};
+					side="West";
+					class Attributes
+					{
+					};
+					id=10;
+					type="B_Helicrew_F";
+					atlOffset=50;
+				};
+				class Item4
+				{
+					dataType="Waypoint";
+					position[]={4644.5742,2.9701064,3489.1577};
+					speed="LIMITED";
+					combat="SAFE";
+					expActiv="catcher flyInHeight 30;";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=11;
+					type="Move";
+					atlOffset=-2.0298936;
+				};
+				class Item5
+				{
+					dataType="Waypoint";
+					position[]={3948.2485,0.075273037,4145.0259};
+					expActiv="catcher flyInHeight 30;";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=12;
+					type="Move";
+					atlOffset=-4.924727;
+				};
+				class Item6
+				{
+					dataType="Waypoint";
+					position[]={4055.7649,5,4212.6611};
+					type="TransportUnload";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=13;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=7;
+						item1=6;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=8;
+						item1=6;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=9;
+						item1=6;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=10;
+						item1=6;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={2};
+						};
+					};
+				};
+			};
+			id=5;
+			atlOffset=-5;
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4674.6821,57.139248,3454.7786};
+				angles[]={0,5.4523711,0};
+			};
+			side="West";
+			flags=2;
+			class Attributes
+			{
+				skill=0.60000002;
+				init=" this setVariable [""SKM_Catcher"",1,true]; ";
+				name="catcher";
+			};
+			id=6;
+			type="B_Heli_Transport_01_F";
+			atlOffset=50;
+		};
+		class Item7
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4103.5454,5.0014391,3663.4316};
+						angles[]={0,5.1675954,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="ls = this addAction [""Launch Skyhook"", {[[C,catcher,30,50,true,2],""SKM""] call BIS_fnc_MP;}];";
+						name="C";
+						isPlayable=1;
+					};
+					id=15;
+					type="B_soldier_PG_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=14;
+			atlOffset=-5;
+		};
+		class Item8
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6709.6201,55.001438,1184.2483};
+						angles[]={0,5.9592996,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						name="bD";
+						isPlayable=1;
+					};
+					id=18;
+					type="B_Pilot_F";
+					atlOffset=50;
+				};
+				class Item1
+				{
+					dataType="Waypoint";
+					position[]={3731.0872,50.056362,3987.2832};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=19;
+					type="Move";
+					atlOffset=45.056362;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=18;
+						item1=17;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
+			id=16;
+			atlOffset=-5;
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6709.6201,57.180164,1184.1606};
+				angles[]={0,5.9592996,0};
+			};
+			side="West";
+			flags=2;
+			class Attributes
+			{
+				skill=0.60000002;
+				ammo=0;
+				name="b";
+			};
+			id=17;
+			type="B_Plane_CAS_01_F";
+			atlOffset=50;
+		};
+		class Item10
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4369.209,5.0014391,3753.6743};
+						angles[]={0,0.82199764,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setVariable [""SKM"",[""P"",30,50,true,2,""""],true];";
+						isPlayer=1;
+						isPlayable=1;
+					};
+					id=21;
+					type="B_soldier_PG_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=20;
+			atlOffset=-5;
+		};
+		class Item11
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4353.4102,5.0014391,3763.2705};
+						angles[]={0,5.3228707,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setVariable [""SKM"",[""P"",30,50,true,2,""""],true];";
+					};
+					id=23;
+					type="B_soldier_PG_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=22;
+			atlOffset=-5;
+		};
+	};
+};
