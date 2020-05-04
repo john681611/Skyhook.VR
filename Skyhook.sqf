@@ -4,7 +4,7 @@ Im happy for you to change it but you must credit me as original author.
 
 To initalise execVM "Skyhook.sqf"; init.sqf (NOT MP tested yet)
 Any object wanting to have a skyhook add this to init : this setVariable ["SKM",["P",30,50,true,1,""],true];
-Any vehicles wanting to catch add this  to init: _catcher setVariable ["SKM_Catcher",1,true];
+Any vehicles wanting to catch add this  to init: this setVariable ["SKM_Catcher",1,true];
 */
 /* SKM Variable [
 State,
@@ -213,7 +213,7 @@ SKM_Hook = {
     _link setPos(_Scargo modelToWorldVisual (_Scargo selectionPosition "spine3"));
 	_Liftrope = ropeCreate[_catcher, [0, 0, -1], _link, [0, 0, 0], (_catcher distance _link)];
 	ropeUnwind[_Liftrope, 5, 0.5];
-	while { ((_catcher distance _link) - (ropeLength _Liftrope) <= 4)} do {
+	while { ((_catcher distance _link) - (ropeLength _Liftrope) <= 5)} do {
 	sleep 0.1;
 	};
 	if (_Scargo isKindOf 'Man') then {
@@ -229,7 +229,7 @@ SKM_Hook = {
 	 };
 	
 	while {
-		_Scargo distance _catcher > 4
+		_Scargo distance _catcher > 7
 	}
 	do {
 
@@ -255,18 +255,24 @@ SKM_CargoLoad = {
 	//Move to cargo
 	deleteVehicle _link;
 	detach _Scargo;
-	if (_Scargo isKindOf 'Man') then {
+	switch true do {
+	case (_Scargo isKindOf 'Man'): {
 		_Scargo switchMove "";
 		_Scargo moveincargo _catcher;
 		sleep 0.5;
 		_Scargo moveincargo _catcher;
 		_Scargo enableRopeAttach false;
 		[_Scargo,"D"] call SKM_UpdateState;
-	} else {
-		if (_catcher canSlingLoad _Scargo) then {
+	};
+	case ((_catcher canVehicleCargo _Scargo) select 0): {
+			_catcher  setVehicleCargo _Scargo;
+			[_Scargo,"D"] call SKM_UpdateState;
+	};
+	case (_catcher canSlingLoad _Scargo): {
 			_catcher setSlingLoad _Scargo;
 			[_Scargo,"D"] call SKM_UpdateState;
-		} else {
+	};
+	default {
 			_Scargo attachto[_catcher, [0, 0, -5]];
 			_catcher setVariable ["SKM_Catcher",2,true];
 			[_Scargo,"AT"] call SKM_UpdateState;

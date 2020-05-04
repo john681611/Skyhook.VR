@@ -1,4 +1,4 @@
-version=52;
+version=53;
 class EditorData
 {
 	moveGridStep=1;
@@ -8,100 +8,113 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=24;
+		nextID=36;
 	};
 	class Camera
 	{
-		pos[]={4369.209,30,3728.6243};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={4021.8113,148.77725,3631.3032};
+		dir[]={-0.31916812,-0.36590871,-0.87433296};
+		up[]={-0.12548304,0.93062538,-0.34374806};
+		aside[]={-0.93948734,4.6580681e-007,0.34295213};
 	};
 };
 binarizationWanted=0;
 addons[]=
 {
 	"A3_Air_F_Heli_Heli_Transport_04",
-	"cba_xeh",
 	"A3_Soft_F_Gamma_Truck_01",
-	"ace_realisticnames",
-	"ace_cargo",
+	"A3_Soft_F_Exp_Truck_01",
 	"A3_Soft_F_Gamma_Hatchback_01",
 	"A3_Structures_F_EPC_Items_Electronics",
 	"A3_Structures_F_Training",
 	"A3_Characters_F",
 	"A3_Air_F_Beta_Heli_Transport_01",
-	"ace_gforces",
-	"ace_parachute",
-	"A3_Air_F_EPC_Plane_CAS_01"
+	"A3_Air_F_EPC_Plane_CAS_01",
+	"A3_Characters_F_Exp",
+	"A3_Air_F_Exp_VTOL_01",
+	"A3_Soft_F_Kart_Kart_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=9;
+		items=11;
 		class Item0
 		{
 			className="A3_Air_F_Heli";
-			name="Arma 3 Helicopters - Aircrafts";
+			name="Arma 3 Helicopters - Aircraft";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item1
-		{
-			className="A3_Characters_F";
-			name="Arma 3 Alpha - Characters and Clothing";
-			author="Bohemia Interactive";
-			url="http://www.arma3.com";
-		};
-		class Item2
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Soft_F_Exp";
+			name="Arma 3 Apex - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item3
-		{
-			className="ace_cargo";
-			name="ACE3 - Cargo";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item4
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item4
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item6
 		{
 			className="A3_Air_F_Beta";
-			name="Arma 3 Beta - Aircrafts";
+			name="Arma 3 Beta - Aircraft";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item7
 		{
-			className="ace_parachute";
-			name="ACE3 - Parachute";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
+			className="A3_Air_F_EPC";
+			name="Arma 3 Win Episode - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item8
 		{
-			className="A3_Air_F_EPC";
-			name="Arma 3 Win Episode - Aircrafts";
+			className="A3_Characters_F_Exp";
+			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
+		};
+		class Item9
+		{
+			className="A3_Air_F_Exp";
+			name="Arma 3 Apex - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item10
+		{
+			className="A3_Soft_F_Kart";
+			name="Arma 3 Karts - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -131,21 +144,21 @@ class Mission
 	};
 	class Entities
 	{
-		items=12;
+		items=16;
 		class Item0
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4411.5874,6.4767475,3772.7427};
-				angles[]={0,5.1675954,0};
+				position[]={4411.5869,6.4767475,3772.7429};
+				angles[]={0,5.1675882,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this attachto [b,[0,-1,-1]];";
+				init="this attachto [b,[0,-1,-1]];" \n "this setVariable [""SKM_Catcher"",1,true]; ";
 				name="Air";
 			};
 			id=0;
@@ -234,8 +247,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4674.6821,55.001438,3454.8284};
-						angles[]={0,5.4523711,0};
+						position[]={4674.6821,55.001438,3454.8281};
+						angles[]={0,5.452374,0};
 					};
 					side="West";
 					flags=2;
@@ -253,8 +266,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4674.6821,55.001438,3454.8284};
-						angles[]={0,5.4523711,0};
+						position[]={4674.6821,55.001438,3454.8281};
+						angles[]={0,5.452374,0};
 					};
 					side="West";
 					class Attributes
@@ -271,15 +284,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4674.6821,55.001438,3454.8284};
-						angles[]={0,5.4523711,0};
+						position[]={4674.6821,55.001438,3454.8281};
+						angles[]={0,5.452374,0};
 					};
 					side="West";
 					class Attributes
 					{
 					};
 					id=9;
-					type="B_Helicrew_F";
+					type="B_helicrew_F";
 					atlOffset=50;
 				};
 				class Item3
@@ -287,15 +300,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4674.6821,55.001438,3454.8284};
-						angles[]={0,5.4523711,0};
+						position[]={4674.6821,55.001438,3454.8281};
+						angles[]={0,5.452374,0};
 					};
 					side="West";
 					class Attributes
 					{
 					};
 					id=10;
-					type="B_Helicrew_F";
+					type="B_helicrew_F";
 					atlOffset=50;
 				};
 				class Item4
@@ -396,15 +409,15 @@ class Mission
 				};
 			};
 			id=5;
-			atlOffset=-5;
+			atlOffset=50;
 		};
 		class Item6
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4674.6821,57.139248,3454.7786};
-				angles[]={0,5.4523711,0};
+				position[]={4674.6821,57.139259,3454.7783};
+				angles[]={0,5.452374,0};
 			};
 			side="West";
 			flags=2;
@@ -450,7 +463,6 @@ class Mission
 			{
 			};
 			id=14;
-			atlOffset=-5;
 		};
 		class Item8
 		{
@@ -481,7 +493,7 @@ class Mission
 				class Item1
 				{
 					dataType="Waypoint";
-					position[]={3731.0872,50.056362,3987.2832};
+					position[]={240.27544,50.056362,7270.0718};
 					class Effects
 					{
 					};
@@ -516,7 +528,7 @@ class Mission
 				};
 			};
 			id=16;
-			atlOffset=-5;
+			atlOffset=49.799709;
 		};
 		class Item9
 		{
@@ -536,7 +548,7 @@ class Mission
 			};
 			id=17;
 			type="B_Plane_CAS_01_F";
-			atlOffset=50;
+			atlOffset=49.799709;
 		};
 		class Item10
 		{
@@ -570,7 +582,6 @@ class Mission
 			{
 			};
 			id=20;
-			atlOffset=-5;
 		};
 		class Item11
 		{
@@ -602,7 +613,315 @@ class Mission
 			{
 			};
 			id=22;
-			atlOffset=-5;
+		};
+		class Item12
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6626.2651,58.54747,1077.8031};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						health=0.059987579;
+						init="this setVariable [""SKM_Catcher"",1,true];";
+						isPlayable=1;
+					};
+					id=26;
+					type="B_T_Pilot_F";
+					atlOffset=53.546032;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male06ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6626.2651,58.54747,1077.8031};
+					};
+					side="West";
+					class Attributes
+					{
+					};
+					id=27;
+					type="B_T_Pilot_F";
+					atlOffset=53.546032;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6626.2651,58.54747,1077.8031};
+					};
+					side="West";
+					class Attributes
+					{
+					};
+					id=28;
+					type="B_T_Pilot_F";
+					atlOffset=53.546032;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6626.2651,58.54747,1077.8031};
+					};
+					side="West";
+					class Attributes
+					{
+					};
+					id=29;
+					type="B_T_Pilot_F";
+					atlOffset=53.546032;
+				};
+				class Item4
+				{
+					dataType="Waypoint";
+					position[]={3933.2014,117.48661,3544.1299};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=30;
+					type="Move";
+					atlOffset=112.48661;
+				};
+				class Item5
+				{
+					dataType="Waypoint";
+					position[]={158.62555,597.5481,6876.9404};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=35;
+					type="Move";
+					atlOffset=592.5481;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=26;
+						item1=25;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=27;
+						item1=25;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=28;
+						item1=25;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=29;
+						item1=25;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={2};
+						};
+					};
+				};
+			};
+			id=24;
+			atlOffset=53.546032;
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6626.2651,65.235611,1077.7531};
+			};
+			side="West";
+			flags=2;
+			class Attributes
+			{
+				init=" this setVariable [""SKM_Catcher"",1,true]; ";
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=25;
+			type="B_T_VTOL_01_vehicle_F";
+			atlOffset=53.546032;
+		};
+		class Item14
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4002.938,5.0014391,3478.575};
+						angles[]={0,5.1675882,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						name="C_1";
+						isPlayable=1;
+					};
+					id=33;
+					type="B_soldier_PG_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male09ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=32;
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3989.752,6.0527129,3477.1121};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this setVariable [""SKM"",[""P"",30,50,true,1,""""],true];";
+			};
+			id=34;
+			type="C_Kart_01_F";
 		};
 	};
 };
